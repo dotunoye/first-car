@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APEX AUTO - Luxury Car Dealership</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- MODAL BACKDROP -->
+  <div class="modal-backdrop"></div>
+
+  <!-- MODAL -->
+  <div class="modal">
+    <button class="modal-close">&times;</button>
+    <div class="modal-header">
+      <div class="modal-gallery"></div>
+      <div class="modal-title"></div>
+    </div>
+    <div class="modal-specs"></div>
+    <div class="modal-description"></div>
+    <div class="modal-actions"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="navbar-logo">APEX AUTO</div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="showroom.html">Showroom</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="navbar-cta" onclick="alert('Calling dealer: +1 (555) 123-4567')">Call Us</button>
+    <button class="navbar-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-slider">
+      <div class="hero-slide active" style="background:  url('https://cdn.jdpower.com/JDP_2024%20Jaguar%20F-Type%20R75%20Convertible%20Giola%20Green%20Rear%20Quarter%20View.jpg') center/cover;"></div>
+      <div class="hero-slide" style="background:  url('https://www.topgear.com/sites/default/files/cars-car/image/2019/09/tg_-_ferrari_f8_tributo_-091.jpg') center/cover;"></div>
+      <div class="hero-slide" style="background:  url('https://hips.hearstapps.com/hmg-prod/images/2026-tesla-model-s-plaid-121-68f66449d5774.jpg?crop=0.6666666666666666xw:1xh;center,top&resize=1200:*') center/cover;"></div>
+      <div class="hero-slide" style="background:  url('https://www.teslarati.com/wp-content/uploads/2019/10/Tesla-Model-S-P100DPlaid-Nurburgring-18-e1571214177807.jpg') center/cover;"></div>
+    </div>
+    <div class="hero-content">
+      <h1>Where Luxury Meets Performance</h1>
+      <p>Experience the finest collection of premium automobiles, handpicked for discerning drivers.</p>
+      <button class="btn btn-primary" onclick="document.querySelector('.featured-section').scrollIntoView({behavior: 'smooth'})">
+        Explore Collection
+      </button>
+    </div>
+    <div class="hero-dots">
+      <div class="hero-dot active"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+      <div class="hero-dot"></div>
+    </div>
+  </section>
+
+  <!-- FEATURED COLLECTION -->
+  <section class="featured-section" id="featured">
+    <div class="container">
+      <div class="section-title">
+        <h2>Featured Collection</h2>
+        <p>Discover our handpicked selection of luxury vehicles, each a masterpiece of engineering and design.</p>
+      </div>
+      <div class="featured-grid" id="featuredCarsContainer">
+        <!-- Populated by JavaScript -->
+      </div>
+      <div class="featured-see-more">
+        <a href="showroom.html" class="btn btn-primary">See More Vehicles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOUNT DEALS -->
+  <section id="deals">
+    <div class="container">
+      <div class="section-title">
+        <h2>Limited Time Deals</h2>
+        <p>Exclusive offers on selected premium vehicles. Don't miss out on these exceptional opportunities.</p>
+      </div>
+      <div class="featured-grid" id="dealsContainer">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT US - BENTO GRID -->
+  <section id="about-bento" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="section-title" style="margin-bottom: var(--spacing-xl);">
+        <h2>Why Choose APEX AUTO</h2>
+      </div>
+      <div class="bento-grid">
+        <!-- Top-Left: Who We Are -->
+        <div class="card bento-large">
+          <h3 style="margin-bottom: var(--spacing-md);">Who We Are</h3>
+          <p style="margin-bottom: var(--spacing-lg); font-size: 1rem;">
+            APEX AUTO is a luxury car dealership dedicated to connecting discerning buyers with the world's finest automobiles. With over two decades of expertise, we've built our reputation on integrity, quality, and unmatched customer service.
+          </p>
+          <div class="about-section">
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">500+</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Vehicles Sold</div>
+            </div>
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">20+</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Years Experience</div>
+            </div>
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">98%</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Customer Satisfaction</div>
+            </div>
+            <div>
+              <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 4px;">24/7</div>
+              <div style="font-size: 0.9rem; color: var(--text-muted);">Customer Support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top-Right: Services -->
+        <div class="card bento-small-tr">
+          <h3 style="margin-bottom: var(--spacing-md);">Our Services</h3>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Expert Consultations</span>
+            </li>
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Test Drives</span>
+            </li>
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Financing Options</span>
+            </li>
+            <li style="margin-bottom: var(--spacing-md); display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Trade-In Evaluation</span>
+            </li>
+            <li style="display: flex; gap: var(--spacing-sm); align-items: flex-start;">
+              <span style="color: var(--accent); font-size: 1.5rem; flex-shrink: 0;">✓</span>
+              <span>Insurance Support</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bottom-Left: Test Drive -->
+        <div class="card bento-small-bl">
+          
+          <h3 style="margin-bottom: var(--spacing-md);">After Sales & Warranty</h3>
+          <p style="margin-bottom: var(--spacing-md); font-size: 1rem;">
+            Your satisfaction doesn't end at purchase. We provide comprehensive after-sales support and industry-leading warranty coverage.
+          </p>
+          <div style=" border-radius: var(--radius-small); ">
+            <h4 style="margin-bottom: var(--spacing-sm); color: var(--accent);">3-Year Comprehensive Coverage</h4>
+            <ul style="list-style-position: inside; color: var(--text-muted); font-size: 0.9rem;">
+              <li>Full parts & labor coverage</li>
+              <li>Roadside assistance 24/7</li>
+              <li>Free maintenance services</li>
+              <li>Extended warranty available</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom-Right: After Sales -->
+        <div class="card bento-large-br">
+          <h3 style="margin-bottom: var(--spacing-md);">Ready to Test Drive?</h3>
+          <p style="margin-bottom: var(--spacing-lg); font-size: 0.95rem;">
+            Schedule your personalized test drive experience with our team.
+          </p>
+          <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="alert('Test drive scheduled!')">
+            Book Now
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAR CARE TIPS CAROUSEL -->
+  <section id="tips">
+    <div class="container">
+      <div class="section-title">
+        <h2>Car Care Tips</h2>
+        <p>Expert advice to keep your luxury vehicle in pristine condition.</p>
+      </div>
+      <div class="carousel">
+        <div class="carousel-track">
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Regular Oil Changes</h3>
+              <p>
+                Maintain engine health with regular oil changes. For luxury vehicles, high-quality synthetic oils are recommended every 7,500-10,000 miles.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Battery Care</h3>
+              <p>
+                Ensure your vehicle's battery is regularly tested and maintained. A weak battery can compromise starting performance and electronics.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Tire Maintenance</h3>
+              <p>
+                Check tire pressure monthly and rotate tires every 6,000 miles. Proper alignment ensures longevity and optimal performance.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Detailing</h3>
+              <p>
+                Professional detailing protects your car's paint and interior. Regular waxing and cleaning maintain the luxury appearance.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Brake Inspection</h3>
+              <p>
+                Regular brake inspections are crucial for safety. Have your braking system checked annually for optimal performance.
+              </p>
+            </div>
+          </article>
+          <article class="carousel-item">
+            <div class="card">
+              <h3 style="color: var(--accent); margin-bottom: var(--spacing-md);">Seasonal Prep</h3>
+              <p>
+                Prepare your vehicle for seasonal changes. Winter tires, fluid adjustments, and protective treatments are recommended.
+              </p>
+            </div>
+          </article>
+        </div>
+        <button class="carousel-arrow prev">&lt;</button>
+        <button class="carousel-arrow next">&gt;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" style="background: var(--bg-card);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Client Testimonials</h2>
+        <p>Hear from our satisfied customers about their APEX AUTO experience.</p>
+      </div>
+      <div class="grid grid-cols-3">
+        <article class="testimonial-card">
+          
+          <div class="testimonial-text">
+            "APEX AUTO provided exceptional service. The team's expertise and dedication made my purchase experience unforgettable."
+          </div>
+          <div class="testimonial-author">John Patterson</div>
+          <div class="testimonial-role">Mercedes S-Class Owner</div>
+          
+        </article>
+        <article class="testimonial-card">
+          
+          <div class="testimonial-text">
+            "I was impressed by the extensive inventory and the professionalism of every staff member. Highly recommended!"
+          </div>
+          <div class="testimonial-author">Sarah Williams</div>
+          <div class="testimonial-role">Porsche 911 Owner</div>
+          
+        </article>
+        <article class="testimonial-card">
+          
+          <div class="testimonial-text">
+            "The after-sales support is outstanding. They truly care about customer satisfaction beyond the purchase."
+          </div>
+          <div class="testimonial-author">Michael Chen</div>
+          <div class="testimonial-role">Tesla Model S Owner</div>
+          
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Drive Your Dream Car?</h2>
+      <p>Schedule a consultation with our experts or visit our showroom today.</p>
+      <div style="display: flex; gap: var(--spacing-lg); justify-content: center; flex-wrap: wrap;">
+        <a href="showroom.html" class="btn btn-secondary">Visit Showroom</a>
+        <button class="btn" style="background: white; color: var(--accent);" onclick="alert('Calling dealer: +1 (555) 123-4567')">Call Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>APEX AUTO</h4>
+        <p style="color: var(--text-muted);">
+          Premium luxury car dealership serving discerning clients worldwide.
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p style="color: var(--text-muted);">
+          📍 123 Luxury Lane, Manhattan, NY<br>
+          📞 +1 (555) 123-4567<br>
+          📧 info@apexauto.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h4>Business Hours</h4>
+        <p style="color: var(--text-muted);">
+          Monday - Friday: 9 AM - 8 PM<br>
+          Saturday: 10 AM - 6 PM<br>
+          Sunday: Closed
+        </p>
+      </div>
+    </div>
+    <div class="footer-socials">
+        <a href="#" class="social-icon">f</a>
+        <a href="#" class="social-icon">𝕏</a>
+        <a href="#" class="social-icon">in</a>
+        <a href="#" class="social-icon">📷</a>
+      </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        © 2024 APEX AUTO. All rights reserved. | Privacy Policy | Terms of Service
+      </div>
+      
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/cars.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Populate Featured Cars on Home Page
+    document.addEventListener('DOMContentLoaded', () => {
+      const featuredCars = getFeaturedCars();
+      CarCardRenderer.renderCarsToContainer(featuredCars, 'featuredCarsContainer');
+
+      const dealsCars = getDiscountCars();
+      CarCardRenderer.renderCarsToContainer(dealsCars, 'dealsContainer');
+    });
+  </script>
+</body>
+</html>
