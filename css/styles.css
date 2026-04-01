@@ -608,7 +608,7 @@ section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 2vw, 2rem);
+  /* padding: 0 clamp(1rem, 2vw, 2rem); */
 }
 
 .grid {
