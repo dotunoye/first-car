@@ -773,6 +773,12 @@ section {
   font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
+.mobile-featured-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
 /* ===========================
    MODAL - Car Details (FIXED to work properly)
    =========================== */
