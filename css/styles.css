@@ -1346,7 +1346,7 @@ footer {
 /* Mobile hero: Reduce height from 100vh to prevent zoomed/cropped images */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh;
+    height: 100vh;
     /* Allows enough vertical space on mobile while preventing image from being cut off */
   }
 }
